@@ -19,7 +19,10 @@ header{
     flex: 1;  /* Asume 1 parte del espacio disponible */
     font-size: 1.5rem;
     font-weight: bold;
-    background-image: url(https://akamai.sscdn.co/uploadfile/letras/fotos/2/a/5/1/2a51d48b89abc929004e1f320f08337c.jpg);
+    background-image: url(https://img.freepik.com/vector-gratis/icono-redes-sociales-vector-instagram-7-junio-2021-bangkok-tailandia_53876-136728.jpg?size=338&ext=jpg&ga=GA1.1.1788614524.1717200000&semt=ais_user);
+    background-size: cover; /* Asegura que la imagen cubra completamente el área del elemento sin distorsionarse */
+    background-position: center; /* Centra la imagen en el elemento */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
 .date {
@@ -27,7 +30,7 @@ header{
     flex: 2;  /* Asume 2 partes del espacio, haciendo que esta sección sea más ancha */
     font-size: 1rem;
     text-align: center;
-    background-color: saddlebrown;
+    background-color: #cdcdcd;
     align-items: center;
     justify-content: center;
 }
@@ -37,7 +40,7 @@ header{
     flex: 1;  /* Asume 1 parte del espacio disponible */
     font-size: 1rem;
     text-align: center;
-    background-color: wheat;
+    background-color: gray;
     align-items: center;
     justify-content: center;
 }
@@ -68,14 +71,16 @@ nav ul li a {
 .main {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     padding: 10px;
+    justify-content: space-around;
 }
 
 .product {
-    flex: 1 1 100%; /* Ocupa toda la fila en pantallas pequeñas */
+    flex: 1 1 100%; /* Por defecto, cada producto ocupa el 100% del ancho: 1 producto por fila */
     margin-bottom: 20px; /* Espacio entre productos */
     text-align: center;
+    box-sizing: border-box;
+    padding: 10px; /* Espacio interno para cada producto */
 }
 
 .product img {
@@ -85,14 +90,15 @@ nav ul li a {
 }
 
 /* Media queries */
-@media (min-width: 451px) {
+@media (min-width: 600px) {
     .product {
-        flex: 1 1 48%; /* Dos productos por fila en pantallas intermedias */
+        flex: 1 1 48%; /* Aproximadamente el 50% del ancho, menos un poco para el margen */
     }
 }
 
-@media (min-width: 1025px) {
+/* Para pantallas de computadora: 3 productos por fila */
+@media (min-width: 1024px) {
     .product {
-        flex: 1 1 30%; /* Tres productos por fila en pantallas grandes */
+        flex: 1 1 31%; /* Aproximadamente el 33% del ancho, menos un poco para el margen */
     }
 }
