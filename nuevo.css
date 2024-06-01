@@ -27,7 +27,7 @@ header{
     display: flex;
     flex: 1;  /* Asume 1 parte del espacio disponible */
     font-size: 1rem;
-    text-align: right;
+    text-align: center;
     background-color: wheat;
     align-items: center;
     justify-content: center;
@@ -40,8 +40,10 @@ nav ul {
     margin: 0;
     padding: 0.5rem 0;
     background-color: #fff;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
 }
 
 nav ul li {
@@ -54,30 +56,62 @@ nav ul li a {
     font-weight: bold;
 }
 
-nav ul li a.active {
-    border-bottom: 2px solid black;
-}
-
-main {
+.main {
     flex-grow: 1;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 2rem;
+    border: 2px solid #000;
+    border-top: none;
 }
 
 .product {
     text-align: center;
-    flex: 1;
+    flex: 1; /* Distribuye el espacio de manera uniforme */
+    display: flex;
+    flex-direction: column; /* Orienta los contenidos del producto verticalmente */
+    justify-content: center; /* Centra el contenido verticalmente dentro de cada producto */
+    border-left: 2px solid #000;
+    height: 25rem;
+}
+
+.product:first-child {
+    border-left: none; /* Elimina el borde izquierdo del primer producto para evitar duplicidad */
 }
 
 .product img {
     width: 80%;
     height: auto;
+    margin: auto; /* Centra la imagen dentro de su contenedor */
 }
 
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #ccc;
+@media(max-width: 1024px) {
+    body{
+        background-color: aqua;
+    }
+
+    .product{
+        height: 20rem;
+    }
+}
+
+@media(max-width: 450px) {
+    body{
+        background-color: aquamarine;
+    }
+
+    .main {
+        display: block; /* Cambia a layout de bloque para apilamiento vertical */
+    }
+
+    .product{
+        height: 25%;
+        border-left: none;
+        border-bottom: 2px solid #000;;
+    }
+
+    .product:last-child {
+        border-bottom: none; /* Elimina el borde izquierdo del primer producto para evitar duplicidad */
+    }
+
 }

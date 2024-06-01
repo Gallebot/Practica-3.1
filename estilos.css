@@ -1,0 +1,79 @@
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: pink;
+    height: 8rem;
+}
+
+.logo {
+    flex: 1;  /* Asume 1 parte del espacio disponible */
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-image: url(https://akamai.sscdn.co/uploadfile/letras/fotos/2/a/5/1/2a51d48b89abc929004e1f320f08337c.jpg);
+}
+
+.date {
+    display: flex;
+    flex: 2;  /* Asume 2 partes del espacio, haciendo que esta sección sea más ancha */
+    font-size: 1rem;
+    text-align: center;
+    background-color: saddlebrown;
+    align-items: center;
+    justify-content: center;
+}
+
+.locations {
+    display: flex;
+    flex: 1;  /* Asume 1 parte del espacio disponible */
+    font-size: 1rem;
+    text-align: right;
+    background-color: wheat;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0.5rem 0;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+nav ul li a.active {
+    border-bottom: 2px solid black;
+}
+
+.main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid #000;
+}
+
+.product {
+    text-align: center;
+    flex: 1;
+    border-left: 2px solid #000; /* Borde sólido, negro y de 2 píxeles de grosor */
+}
+
+.product img {
+    width: 80%;
+    height: auto;
+}
+
