@@ -81,7 +81,7 @@ nav ul li a {
     text-align: center;
     box-sizing: border-box;
     padding: 10px; /* Espacio interno para cada producto */
-    border: 1px solid #ccc;
+    border: 1px solid #000;
 }
 
 .product img {
