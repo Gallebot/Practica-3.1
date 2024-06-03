@@ -81,6 +81,7 @@ nav ul li a {
     text-align: center;
     box-sizing: border-box;
     padding: 10px; /* Espacio interno para cada producto */
+    border: 1px solid #ccc;
 }
 
 .product img {
@@ -93,6 +94,7 @@ nav ul li a {
 @media (min-width: 600px) {
     .product {
         flex: 1 1 48%; /* Aproximadamente el 50% del ancho, menos un poco para el margen */
+        margin: 5px;
     }
 }
 
@@ -100,5 +102,6 @@ nav ul li a {
 @media (min-width: 1024px) {
     .product {
         flex: 1 1 31%; /* Aproximadamente el 33% del ancho, menos un poco para el margen */
+        margin: 5px;
     }
 }
