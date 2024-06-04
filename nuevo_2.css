@@ -105,3 +105,10 @@ nav ul li a {
         margin: 5px;
     }
 }
+
+/* Media query para pantallas pequeñas (desaparecen los extremos de la página) */
+@media (max-width: 600px) {
+    .logo, .locations {
+        display: none; /* Oculta el logo y la sección de locations */
+    }
+}
